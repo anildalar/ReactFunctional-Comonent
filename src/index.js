@@ -1,17 +1,26 @@
+// Import Area
+//Import {Someting} From 'Somelibrary1';
+//Import Someting2 From 'Somelibrary2';
+
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM  from 'react-dom';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+//let x=<h1>Hello</h1>; // JSX 
+function MyComponentC(){
+    //We know that Functional Component Must return HTML
+    //So we use return Keyword
+    return <span> How are you?</span>
+} 
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+function MyComponentB(){
+    return <span>Anil <MyComponentC></MyComponentC></span>;
+}
+function MyComponentA(){
+    //functional Component Always Return HTML
+    //Lets Place the second functional Companent inside this companent
+    return <h1>Hello <MyComponentB></MyComponentB></h1>;
+}
+
+//Manupulation in Virtual DOM
+//ReactDOM.render(whatelement,wheretoplace);
+ReactDOM.render(<MyComponentA></MyComponentA>,document.getElementById('root'));
