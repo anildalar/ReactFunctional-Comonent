@@ -44,7 +44,7 @@ npm -v
 Components
 1. Components are independent and reusable bits of code
 2. Components Return HTML
-3. Componets can contain other components
+3. Components can contain other components
 
 There are 2 Types of Component In React
 
@@ -69,6 +69,23 @@ Now lets Upload this code to github
 Code is updloaded successfully to github.
 
 Thank you for watching this video.
+
+React Tutorial 3
+ . Components can contain other components
+
+1. Functional Component
+	1.1 Js Function
+	1.2 Arrow Function
+2. Class Component
+
+1. Class Component can contain other Class Component
+2. Class Component can contain other Functional Component
+3. Functional Component can contain Class Companent
+4. Functional Component can contain other Functional Component
+
+
+
+
 
 
 

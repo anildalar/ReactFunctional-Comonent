@@ -1,29 +1,88 @@
 // Import Area
-//Import {Someting} From 'Somelibrary1';
-//Import Someting2 From 'Somelibrary2';
+// Import somting from 'somelibary';
 
 import React from 'react';
-import ReactDOM  from 'react-dom';
+import ReactDOM from 'react-dom';
 
-//let x=<h1>Hello</h1>; // JSX 
-//Fat Arrow Function
-let MyComponentD = ()=> <span> I am Fine Thanks</span>;
 
-let MyComponentC = ()=>{
-    //We know that Functional Component Must return HTML
-    //So we use return Keyword
-    return <span> How are you? <MyComponentD /> </span>
-} 
+//Create some changes in Virtual DOM (Memory)
 
-function MyComponentB(){
-    return <span>Anil <MyComponentC /></span>;
+//Object.method();
+//ReactDOM.render(what,where);
+
+//Create a Class Component
+
+/**
+ * class C extends P{
+ *      //1. Property
+ * 
+ *      //2. Constructor
+ * 
+ *      //3. Method
+ * }
+ */
+//4. Functional Component can contain other Functional Component
+let FuncA = ()=><span>Hello FuncA <FuncB /> </span>;
+let FuncB = ()=><span>Hello FuncB</span>;
+
+//3. Functional Component can contain Class Companent
+class Raj extends React.Component{
+     //1. Property
+
+    //2. Constructor
+
+    //3. Method
+    render(){
+        return <span>Hello Raj</span> 
+     }
 }
-function MyComponentA(){
-    //functional Component Always Return HTML
-    //Lets Place the second functional Companent inside this companent
-    return <h1>Hello <MyComponentB></MyComponentB></h1>;
+
+
+ //2. Class Component can contain other Functional Component
+let Kiran = ()=> <span>Hello Kiran <FuncA />  <Raj/> </span>;
+
+//1. Class Component can contain other Class Component
+class Vikki extends React.Component{
+     //1. Property
+
+    //2. Constructor
+
+    //3. Method
+    render(){
+        return <span>Hello Vikki <Kiran/></span> 
+     }
 }
 
-//Manupulation in Virtual DOM
-//ReactDOM.render(whatelement,wheretoplace);
-ReactDOM.render(<MyComponentA></MyComponentA>,document.getElementById('root'));
+//Class Component must have a render Method
+class Ravi extends React.Component{ //inheritance
+    //1. Property
+
+    //2. Constructor
+
+    //3. Method
+    render(){
+       return <h3>Hello Ravi <Vikki/></h3> 
+    }
+}
+
+
+//Create Functional Component
+//Compoents Always Return HTML
+
+//ES6 Arrow Functions
+
+let Sunil = ()=> <h2>Hello Sunil</h2>;
+
+
+//Older Way
+function Anil(){
+
+    return <h2>Hello Anil</h2>; //JSX Javascript XML
+}
+//XML Extensible Markup Language
+//1. Strict point for XML
+// Every Element Must have a closing tag
+//Self Closing Tag <Anil />
+
+ReactDOM.render( <Ravi /> ,document.getElementById('root'));
+
