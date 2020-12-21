@@ -1,21 +1,25 @@
 React
-1.React is a JavaScript library for building user interfaces.
+1. React is a JavaScript library for building user interfaces.
 
-2.React is used to build single page applications (SPA).
+2. React is used to build single page applications (SPA).
 
 3. React allows us to create reusable UI components.
 
-4. React uses Virtual DOM(Document Object Model)
+4. React uses Virtual DOM ( Document Object Model )
 
 5. React runs on defaul port 3000
 
-5. React was build by Facebook
+6. React was build by Facebook
+
+7. React uses Babel ( Javascript Compiler )
+
+8. React uses Webpack ( Module Bundler ).
 
 To BUild Single Page Application (SPA) There are 3 Most Popular Framework avaible in the market
 
-1. Angualar - Google   			- 500KB  Real DOM
-2. React    - Facebook 			- 100KB  Virtual DOM + Real DOM
-3. VueJs    - Individual Developer	- 80KB   Virutal DOM + Real DOM
+1. Angualar - Google    (Miško Hevery)    - 500KB  Real DOM
+2. React    - Facebook  (Jordan Walke)    - 100KB  Virtual DOM + Real DOM
+3. VueJs    - Developer (Evan You)	  - 80KB   Virutal DOM + Real DOM
 
 DOM
 Document Object Model
