@@ -6,14 +6,17 @@ import React from 'react';
 import ReactDOM  from 'react-dom';
 
 //let x=<h1>Hello</h1>; // JSX 
-function MyComponentC(){
+//Fat Arrow Function
+let MyComponentD = ()=> <span> I am Fine Thanks</span>;
+
+let MyComponentC = ()=>{
     //We know that Functional Component Must return HTML
     //So we use return Keyword
-    return <span> How are you?</span>
+    return <span> How are you? <MyComponentD /> </span>
 } 
 
 function MyComponentB(){
-    return <span>Anil <MyComponentC></MyComponentC></span>;
+    return <span>Anil <MyComponentC /></span>;
 }
 function MyComponentA(){
     //functional Component Always Return HTML
